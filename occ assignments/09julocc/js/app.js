@@ -28,7 +28,9 @@ function CreateAccountViewModel() {
        email: true
     });
     self.course = ko.observable([]).extend({required:true});
-    self.genderType = ko.observable([]).extend({required:true});
+    self.genderType =ko.observable().extend({
+      required: true
+  });
     self.hasBeenSubmitted = ko.observable(false);
     
     window.firstName = self.firstName;
